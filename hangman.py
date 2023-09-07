@@ -1,4 +1,7 @@
 import random
+
+import hangman_arts
+
 # Step 1
 
 word_list = ["aardvark", "baboon", "camel", "apple", "flower", "queen", "mashroom", "neighbord"]
@@ -33,7 +36,7 @@ while not the_end:
             list_word[position] = letter
 
     if guess not in chosen_word:
-        print(f"You guessed {guess}, that's not in the word. You lose a life.", stages[lives])
+        print(f"You guessed {guess}, that's not in the word. You lose a life.", hangman_arts.stages[lives])
 
         lives -= 1
         if lives == 0:
